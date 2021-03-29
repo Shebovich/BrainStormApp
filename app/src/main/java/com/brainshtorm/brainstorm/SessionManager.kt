@@ -9,7 +9,7 @@ class SessionManager(val context: Context) {
         val FIRST_DAY = "first_day"
     }
     val sharedPref: SharedPreferences = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
-
+    // 323232
     fun save(KEY_NAME: String, text: String) {
 
         val editor: SharedPreferences.Editor = sharedPref.edit()
