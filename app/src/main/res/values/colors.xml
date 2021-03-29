@@ -1,10 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="purple_200">#FFBB86FC</color>
+    <color name="red_color">#F65A57</color>
+    <color name="green_color">#6CE51F</color>
+    <color name="yellow_color">#F9BE58</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
+    <color name="white_64">#A3FFFFFF</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="description_text">#A3393D64</color>
+    <color name="roboto_text_medium">#394A64</color>
+    <color name="background_color_main">#F7F9FF</color>
+    <color name="maze_color">#62CFC9</color>
+    <color name="mental_arithmetic_color">#64DD17</color>
+    <color name="memory_color">#F2AE48</color>
+    <color name="logic_color">#EA80FC</color>
+    <color name="attention_red_color">#EF5350</color>
+    <color name="attention_color">#00C4D8</color>
+    <color name="quick_thinking_color">#9F74EB</color>
+    <color name="matrix_color">#FDC2A8</color>
+    <color name="progress_color">#394A64</color>
+    <color name="start_training_color">#5C5FB5</color>
 </resources>

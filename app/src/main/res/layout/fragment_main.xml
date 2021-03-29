@@ -1,6 +1,359 @@
 <?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_height="match_parent">
 <androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_width="match_parent"
+    android:descendantFocusability="blocksDescendants"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/welcome_back_text"
+        android:layout_width="wrap_content"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white_64"
+        android:text="@string/welcome_back">
+
+    </TextView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/start_card"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:cardCornerRadius="16dp"
+        app:cardElevation="12dp"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_width="match_parent"
+        android:layout_marginStart="16dp"
+
+        android:layout_marginEnd="16dp"
+        android:layout_height="188dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/card_constraint"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rectangle_daily">
+
+            <TextView
+                android:id="@+id/day_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:text="Complete Your"
+
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/daily_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="Daily Workout"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@id/day_text"
+                app:layout_constraintTop_toBottomOf="@id/day_text" />
+
+
+            <TextView
+                android:id="@+id/provide_brain_text"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-light"
+
+                android:text="Provide brain productivity in everyday life"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/daily_text"
+                app:layout_constraintTop_toBottomOf="@id/daily_text" />
+
+            <RelativeLayout
+                android:layout_width="145dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/margin_16"
+                app:layout_constraintStart_toStartOf="@+id/day_text"
+                app:layout_constraintTop_toBottomOf="@id/provide_brain_text">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_start_training"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rounded_button_12"></androidx.appcompat.widget.AppCompatButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:elevation="12dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="START TRAINING"
+                    android:textColor="#63A4D8">
+
+                </TextView>
+            </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:layout_width="143dp"
+        android:layout_height="172dp"
+        android:layout_alignTop="@+id/start_card"
+        android:layout_alignParentEnd="true"
+
+        android:layout_marginEnd="24dp"
+        android:elevation="24dp"
+        android:src="@drawable/girl_main"
+        app:layout_constraintBottom_toBottomOf="@+id/start_card"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/popular_game_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/start_card"
+        android:text="Most popular games"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/start_card"
+        android:textColor="@color/progress_color"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginStart="16dp"
+        >
+
+    </TextView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/popular_games_layout"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/popular_game_text"
+        app:layout_constraintTop_toBottomOf="@+id/popular_game_text"
+        android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/matrix_constraint"
+        android:layout_width="0dp"
+        android:layout_height="96dp"
+        app:layout_constraintEnd_toStartOf="@+id/maze_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_rectangle_matrix_main">
+
+        <ImageView
+            android:id="@+id/icon_matrix"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_frame_maze">
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Matrix"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@+id/icon_matrix"
+            app:layout_constraintTop_toBottomOf="@+id/icon_matrix" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/maze_layout"
+        android:layout_width="0dp"
+        android:layout_height="136dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/matrix_constraint"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/ic_rectangle_maze_main">
+
+        <ImageView
+            android:id="@+id/icon_maze"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_frame_maze"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+        <TextView
+            android:id="@+id/maze_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Maze"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/icon_maze"
+            app:layout_constraintTop_toBottomOf="@+id/icon_maze"></TextView>
+
+        <TextView
+            android:id="@+id/description_maze"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Find a way out"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/icon_maze"
+            app:layout_constraintTop_toBottomOf="@+id/maze_text"></TextView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/quick_math_layout"
+            android:layout_width="0dp"
+            android:layout_height="136dp"
+
+            app:layout_constraintEnd_toStartOf="@id/component_layout"
+            android:layout_below="@+id/matrix_constraint"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/ic_rectangle_maze_main"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/matrix_constraint">
+
+            <ImageView
+                android:id="@+id/icon_quick_math"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ic_frame_maze"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Qick math"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/icon_quick_math"
+                app:layout_constraintTop_toBottomOf="@+id/icon_quick_math" />
+
+            <TextView
+                android:layout_width="126dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif-light"
+                android:text="Make operations with numbers"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/component_layout"
+            android:layout_width="0dp"
+            android:layout_height="96dp"
+            android:layout_below="@+id/maze_layout"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@id/quick_math_layout"
+            android:background="@drawable/ic_rectangle_component_main"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/quick_math_layout">
+
+            <ImageView
+                android:id="@+id/icon_component"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ic_frame_maze"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Component"
+                android:textColor="@color/white"
+
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/icon_component"
+                app:layout_constraintTop_toBottomOf="@+id/icon_component" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/games_library"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Games library"
+        android:textSize="20sp"
+        android:textColor="@color/progress_color"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/popular_games_layout"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        >
+
+    </TextView>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/games_library"
+
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/games_library"
+        app:layout_constraintBottom_toBottomOf="@id/games_library"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="sans-serif-light"
+        android:text="10 Games"
+        android:textColor="@color/progress_color"
+        android:textSize="14sp">
+    </TextView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/games_recycler"
+        app:layout_constraintTop_toBottomOf="@+id/games_library"
+        android:layout_width="match_parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        android:nestedScrollingEnabled="false"
+        android:layout_height="wrap_content">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

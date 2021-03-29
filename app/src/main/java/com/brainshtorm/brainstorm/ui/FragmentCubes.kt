@@ -9,11 +9,9 @@ import android.util.DisplayMetrics
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.GridLayout
-import android.widget.ImageView
-import android.widget.Toast
+import android.widget.*
 import androidx.fragment.app.Fragment
+import com.brainshtorm.brainstorm.R
 import com.brainshtorm.brainstorm.RandomUtils.RandomUtil
 import com.brainshtorm.brainstorm.data.TapButton
 import com.brainshtorm.brainstorm.databinding.FragmentAnimalBinding
@@ -21,6 +19,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import java.util.*
 import kotlin.random.Random
 
 class FragmentCubes : Fragment() {
@@ -73,10 +72,11 @@ class FragmentCubes : Fragment() {
     fun addTapGameSquares() {
         for (i in 0..3){
             for (j in 0..3){
-                val tapButton = Button(context)
+                val tapButton = ImageButton(context)
+                tapButton.setBackgroundResource(R.drawable.ic_cube)
                 val layoutParams: GridLayout.LayoutParams = GridLayout.LayoutParams()
-                layoutParams.width = context?.let { it1 -> convertDpToPixel(80F, it1).toInt() }!!
-                layoutParams.height = context?.let { it1 -> convertDpToPixel(80F, it1).toInt() }!!
+                layoutParams.width = context?.let { it1 -> convertDpToPixel(90F, it1).toInt() }!!
+                layoutParams.height = context?.let { it1 -> convertDpToPixel(90F, it1).toInt() }!!
                 tapButton.layoutParams = layoutParams
                 binding.animalsLayout.addView(tapButton)
                 val tapButtonObject = TapButton(tapButton,i,j)
