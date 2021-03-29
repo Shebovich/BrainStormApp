@@ -1,0 +1,41 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/fragment_main">
+
+
+    <fragment
+        android:id="@+id/fragment_main"
+        android:name="com.brainshtorm.brainstorm.ui.FragmentMain"
+        tools:layout="@layout/fragment_main"
+        android:label="FragmentMain" >
+        <action
+            android:id="@+id/action_fragment_main_to_fragmentDay"
+            app:destination="@id/fragmentDay" />
+        <action
+            android:id="@+id/action_fragment_main_to_pirateFragment"
+            app:destination="@id/pirateFragment" />
+        <action
+            android:id="@+id/action_fragment_main_to_fragmentCubes"
+            app:destination="@id/fragmentCubes" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDay"
+        android:name="com.brainshtorm.brainstorm.ui.FragmentDay"
+        android:label="FragmentDay" >
+        <action
+            android:id="@+id/action_fragmentDay_to_pirateFragment"
+            app:destination="@id/pirateFragment" />
+        <action
+            android:id="@+id/action_fragmentDay_to_fragmentCubes"
+            app:destination="@id/fragmentCubes" />
+    </fragment>
+    <fragment
+        android:id="@+id/pirateFragment"
+        android:name="com.brainshtorm.brainstorm.varvarGame.PirateFragment"
+        android:label="PirateFragment" />
+    <fragment
+        android:id="@+id/fragmentCubes"
+        android:name="com.brainshtorm.brainstorm.ui.FragmentCubes"
+        android:label="FragmentCubes" />
+</navigation>

@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">BrainStorm</string>
+    <string name="welcome_back">Welcome back,</string>
+    <string name="logic">Logic</string>
+    <string name="maze">Maze</string>
+    <string name="find_a_way_out">Find a way out</string>
+    <string name="memory">Memory</string>
+    <string name="reaction">Reaction</string>
+    <string name="pirate_hint">Do not let the pirate win! Follow his instructions</string>
 </resources>
